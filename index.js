@@ -93,6 +93,74 @@ app.post('/helpermain',(req,res)=>{
 })
 
 
+app.get('/helpquiz',(req,res)=>{
+    res.render('helpquiz')
+})
+
+app.post('/helpquiz',(req,res)=>{
+    let score=0;
+    // const a = req.body;
+    if(req.body.cough==="yes"){
+        score++;
+    }
+    if(a.cold==="yes"){
+        score++;
+    }
+    if(a.diarrhea==="yes"){
+        score++;
+    }
+    if(a.bst==="yes"){
+        score++;
+    }
+    if(a.muscle==="yes"){
+        score++;
+    }
+    if(a.headache==="yes"){
+        score++;
+    }
+    if(a.fever==="yes"){
+        score++;
+    }
+    if(a.breathing==="yes"){
+        score+=2;
+    }
+    
+    if(a.tied==="yes"){
+        score+=2;
+    }
+    
+    if(a.travel==="yes"){
+        score+=3;
+    }
+    
+    if(a.affecarea==="yes"){
+        score+=3;
+    }
+    
+    if(a.affecperson==="yes"){
+        score+=3;
+    }
+
+    if(score<=2){
+        res.send('Keep Track of Your health, Nothing too serious!')
+    }
+    else if(score>3 && score <=5){
+        res.send('Follow Good Hygenie and Observe the Changes')
+    }
+    else if(score>5 && score<=12){
+        res.send('Contact Your Doctor ');
+    }
+    else{
+        res.send('Contact DOH and follow self quarantine');
+    }
+
+    
+
+
+
+    console.log(req.body)
+})
+
 
 app.listen(port,()=>{
     console.log('listening')

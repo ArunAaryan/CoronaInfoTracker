@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="">
+    
+
+    <div class = "container" style = "padding-left:None;padding-top:2rem;padding-right:none;margin-none;">
+        <form  action="helpquiz" method="POST">
+            
+       <div> <span id="spantext">Do you have cough?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="cough" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="cough" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Do you have cold?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="cold" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="cold" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Do you have Diarrhea?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="diarrhea" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="diarrhea" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Do you have burining sensation in throat/soar throat?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="bst" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="bst" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Do you have muscle cramps?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="muscle" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="muscle" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Do you have headache?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="headache" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="headache" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Do you have fever more than normal(37.8 c)?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="fever" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="fever" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Do you have trouble breathing?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="breathing" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="breathing" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Are you experiencing Tired than usual?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="tired" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="tired" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="travel">Do you any travel history to other countries in the past 14 days(train/airplane)?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="travel" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="travel" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Have you been to any affected area of covid-19?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="affecarea" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="affecarea" <value="no">
+    </div>
+    <br/>
+    
+       <div> <span id ="spantext" name="cough">Have you been in contact with a covid-19 affected person?</span>
+        <span id ="spantext">  Yes  </span><input type = "radio" name="affecperson" value="yes">&nbsp&nbsp
+        <span id = "spantext">  No  </span><input type = "radio" name="affecperson" <value="no">
+    </div>
+    <br/>
+    
+<input type="submit" class="btn btn-secondary btn-block" value="calculate" onclick="calculate();">
+        </form>
+        
+        </div>
+
+
+
+
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+    body{
+            background: #black;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+        
+        } 
+        #spantext{
+            color:white;
+        }
+        </style>
+        </body>
+        </html>
