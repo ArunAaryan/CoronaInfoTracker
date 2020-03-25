@@ -41,7 +41,7 @@ app.get('/isolist',(req,res)=>{
 app.get('/helper',(req,res)=>{
     if(req.query.key==="JPubCause*14"){
         StateWiseInfo.find({},null,{sort:{'State':1}},(err,statedata)=>{
-            res.render('helper',{statedata});
+            res.render('helperstate',{statedata});
         })
        
     }
@@ -61,7 +61,7 @@ app.post('/helper',(req,res)=>{
         Deaths = req.body.Deaths
     }
 
-    StateWiseInfo.updateOne({State},{$set:{"Confirmed":Confirmed, "Deaths":Deaths}}).then(res.render('helperstate'));
+    StateWiseInfo.updateOne({State},{$set:{"Confirmed":Confirmed, "Deaths":Deaths}}).then(res.send("!updated"));
 
 })
 app.get('/helpermain',(req,res)=>{
