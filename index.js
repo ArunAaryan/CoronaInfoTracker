@@ -39,7 +39,7 @@ app.get('/isolist',(req,res)=>{
 })     
 
 app.get('/helper',(req,res)=>{
-    if(req.query.key==="JPubCause*14"){
+    if(req.query.key===""){
         StateWiseInfo.find({},null,{sort:{'State':1}},(err,statedata)=>{
             res.render('helperstate',{statedata});
         })
@@ -65,7 +65,7 @@ app.post('/helper',(req,res)=>{
 
 })
 app.get('/helpermain',(req,res)=>{
-    if(req.query.key==="JPubCause*14"){
+    if(req.query.key===""){
         currentMainInfo = MainInfo.findOne({},null,{sort:{'_id':-1}},(err, data)=>{
             if(err)
                 console.log(err)
