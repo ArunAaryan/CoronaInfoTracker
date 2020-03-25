@@ -1,7 +1,7 @@
 const express  = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan')
-
+var port = process.env.PORT || 5000;
 db = process.env.MONGO_IRI
 const MainInfo = require('./models/main-info');
 const StateWiseInfo = require('./models/statewiseinfo');
@@ -39,6 +39,6 @@ app.get('/isolist',(req,res)=>{
     
 app.set('views','./views')
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log('listening')
 })
