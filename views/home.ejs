@@ -1,0 +1,192 @@
+
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Covid-19</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="min-width: 23rem;">
+    
+
+    <div class = "container" style = "padding-left: 2rem;padding-left:None;padding-top:2rem;min-width:24rem;">
+        <div class="content pb-0">
+        <h5 class="display-5" id ="cv-heading">Covid-19 Information</h5>
+        <p style="color:white"> Corona-Virus Helpline Number +91-11-23978046  or 1075.</p>
+        <a style= "color:cyan;"href = "https://dot.gov.in/sites/default/files/Revised_Corona_ad_Eng.pdf?download=1">Do's and Don'ts(dot.gov.in)</a>
+        <br/>
+        <a class = "small" href = "/isolist"style = "color:white;">Telangana Isolation Centre List</a>
+
+    <!-- Widgets  -->
+    <p class = "small" style="color:white"> Last Updated : <%=data.UpdatedLast %></p>
+    <div class="row" style = "">
+        <div class="col-lg-3 col-md-6">
+            <div class="card " id = "total-aff" style = "">
+                <div class="card-body">
+                    <div class="stat-widget-five">
+                        
+                        <div class="stat-content" >
+                            <div class="text-left dib"> 
+                                <div class="font-weight-bold" >Total Confirmed</div>
+                                <div class="stat-text"><span class="count"><%=data.Confirmed %></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card" id = "new-cases">
+                <div class="card-body">
+                    <div class="stat-widget-five">
+                       
+                        <div class="stat-content">
+                            <div class="text-left dib">
+                                <div class="stat-heading">New Cases</div> 
+                                <div class="stat-text"><span class="count"><%=data.NewCases %></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card" id ="deaths">
+                <div class="card-body">
+                    <div class="stat-widget-five">
+                        
+                        <div class="stat-content">
+                            <div class="text-left dib"> 
+                                <div class="stat-heading">Deaths</div>
+                                <div class="stat-text"><span class="count"><%=data.Deaths %></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card" id="recovered">
+                <div class="card-body">
+                    <div class="stat-widget-five">
+                        
+                        <div class="stat-content">
+                            <div class="text-left dib"> 
+                                <div class="stat-heading">Recovered</div>
+                                <div class="stat-text"><span class="count"><%=data.Recovered %></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div> 
+    <br/>
+    
+    
+
+
+   <div>
+    <table class="table" id="state-wise-table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">sno(<%= statedata.length %>)</th>
+            <th scope="col">State</th>
+            <th scope="col">Confirmed</th>
+            <th scope="col">Deaths</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+            <% statedata.map((key,index)=>{ %>
+                <tr>
+                    <th scope="row"><%= index+1 %></th>
+                    <td><%= key.State%></td>
+                    <td><%=key.Confirmed %></td>
+                    <td><%= key.Deaths %></td>
+                  </tr>
+               <% }); %>
+            
+          
+          
+        </tbody>
+      </table></div>
+     
+
+ 
+
+</div>
+</div>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+    #total-aff{background: #c31432;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color:white;
+        border:None}
+    #new-cases{
+       
+        background: #659999;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f4791f, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color:white;
+border:None;
+font-weight: bold;
+    }
+    #deaths{
+        background: #f85032;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #e73827, #f85032);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #e73827, #f85032); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color:white;
+border:None;
+font-weight: bold;
+    }
+    #recovered{
+        background: #11998e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color:white;
+border:None;
+font-weight: bold;
+    }
+
+#cv-heading{
+    font-weight:bold;
+    color:white;
+}
+
+#state-wise-table{
+    color:white;
+    
+}
+
+body{
+    background: #black;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+} 
+</style>
+</body>
+</html>
