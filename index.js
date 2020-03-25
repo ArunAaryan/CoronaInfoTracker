@@ -2,7 +2,7 @@ const express  = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan')
 
-db = process.env.MONGO_URI
+db = process.env.MONGO_IRI
 const MainInfo = require('./models/main-info');
 const StateWiseInfo = require('./models/statewiseinfo');
 mongoose
