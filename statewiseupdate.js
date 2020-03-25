@@ -13,8 +13,8 @@ mongoose
 
   const newpost = new StateWiseInfo({
     sno:1,
-    State:"Telangana",
-    Confirmed:"39"
+    State:"Puducherry",
+    Confirmed:"1"
     
   });
   // console.log(newpost._id)

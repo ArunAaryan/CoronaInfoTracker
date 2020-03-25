@@ -12,7 +12,7 @@ mongoose
 
 
   const newpost = new MainInfo({
-    Confirmed:560,
+    Confirmed:590,
     NewCases:25,
     Deaths:11,
     Recovered:19

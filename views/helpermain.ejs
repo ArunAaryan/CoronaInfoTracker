@@ -1,0 +1,68 @@
+
+<html>
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+        <title>Covid-19</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body style="min-width: 23rem;">
+        <div class = "container" style = "padding-left: 2rem;padding-left:None;padding-top:2rem;min-width:24rem;">   
+             
+
+                 <form action ="/helpermain" method="POST">
+                    <table class="table" id="state-wise-table" style="color:white;"">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Confirmed </th>
+                            <th scope="col">NewCases</th>
+                            <th scope="col">Deaths</th>
+                            <th scope="col">Recovered</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody class = "thead-dark">
+                            <tr>
+                                <td >
+                                    <input type="text" value="<%= data.Confirmed %>" name="Confirmed">
+                                </td>
+                                <td><input type="text" value="<%= data.NewCases %>" name="NewCases">
+                                </td>
+                                <td><input type="text" value="<%= data.Deaths %>" name ="Deaths">
+                                </td>
+                                <td><input type="text" value="<%= data.Recovered %>" name="Recovered">
+                                </td>
+                                
+
+                            </tr>
+                            
+                            
+                        
+                        </tbody>
+                        </table>
+                        <input type="submit" value="submit" class="btn btn-block btn-primary" >
+                    </form>
+                      
+                  
+
+
+
+
+            <style>
+
+            body{
+                background: #black;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
+            
+            } 
+            </style>
+            </body>
+            </html>
