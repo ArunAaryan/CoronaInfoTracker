@@ -1,3 +1,3 @@
 # CoronaInfoTracker
-This project is hosted at publicinfo.herokuapp.com
+This project is no longer maintained.
 Project's is to provide information About Covid-19 Cases in india.
